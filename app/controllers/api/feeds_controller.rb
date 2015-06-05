@@ -1,4 +1,6 @@
 class Api::FeedsController < ApplicationController
+  before_action :check_logged_in, only: [:create, :destroy]
+
   def index
     render :json => Feed.all
   end

@@ -3,6 +3,7 @@ window.NewsReader = {
   Collections: {},
   Views: {},
   Routers: {},
+
   initialize: function() {
     NewsReader.feeds = new NewsReader.Collections.Feeds();
     NewsReader.feeds.fetch();
@@ -10,7 +11,6 @@ window.NewsReader = {
       $rootEl: $("#content")
     });
     Backbone.history.start();
-
   }
 };
 

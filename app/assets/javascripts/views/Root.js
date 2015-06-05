@@ -3,6 +3,8 @@ NewsReader.Views.Root = Backbone.CompositeView.extend({
   className: "container",
 
   initialize: function () {
+    this.loginView = new NewsReader.Views.LoginView();
+    this.addSubview("#login", loginView);
     this.indexView = new NewsReader.Views.FeedsIndex(
       { collection: NewsReader.feeds }
     );

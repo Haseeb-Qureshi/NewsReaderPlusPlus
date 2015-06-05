@@ -12,6 +12,9 @@
  *= require_tree .
  */
 
+body {
+  font-family: monospace;
+}
 
 button {
   padding-top: 0px;

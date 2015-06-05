@@ -33,6 +33,6 @@ NewsReader.Views.FeedShow = Backbone.CompositeView.extend({
 
   setIFrame: function (entryUrl) {
     this.entryUrl = entryUrl;
-    this.render();
+    this.$('iframe').attr("src", entryUrl);
   }
 });

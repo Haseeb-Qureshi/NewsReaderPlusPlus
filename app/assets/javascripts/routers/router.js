@@ -25,4 +25,12 @@ NewsReader.Routers.Router = Backbone.Router.extend({
   entryShow: function (feedId, entryUrl) {
     this.rootView.showEntry(feedId, entryUrl);
   },
+
+  handleError: function (model, response, options) {
+    if (response.status === 401) {
+      this.promptForLogin();
+    } else {
+      //stuff
+    }
+  },
 });
